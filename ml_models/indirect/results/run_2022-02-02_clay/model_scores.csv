@@ -1,0 +1,2 @@
+"start_time","run_time","model_name","train_RMSE","train_MAE","cv_or_validation_RMSE","cv_or_validation_MAE","test_RMSE","test_MAE"
+"2022-05-04 15:26:16","33.6 minutes","run_2022-02-05_clay",5.26,4.058,9.776,8.017,7.221,6.219

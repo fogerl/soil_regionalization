@@ -1,0 +1,2 @@
+"start_time","run_time","model_name","train_RMSE","train_MAE","cv_or_validation_RMSE","cv_or_validation_MAE","test_RMSE","test_MAE"
+"2022-05-04 16:58:42","30.92 minutes","run_2022-02-11_ksat",101.353,50.485,233.025,159.655,308.204,177.39

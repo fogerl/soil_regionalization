@@ -1,0 +1,2 @@
+"start_time","run_time","model_name","train_RMSE_ksat","train_RMSE_mean","train_MAE_ksat","train_MAE_mean","val_RMSE_ksat","val_RMSE_mean","val_MAE_ksat","val_MAE_mean","test_RMSE_ksat","test_RMSE_mean","test_MAE_ksat","test_MAE_mean","layers","units","dropout","batch_size","ensemble_runs"
+"2022-05-04 16:47:30","9.3 minutes","run_2022-02-10_FNN",390.755,390.755,260.462,260.462,331.773,331.773,248.153,248.153,369.153,369.153,299.982,299.982,5,150,0.08,125,5

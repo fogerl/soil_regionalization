@@ -1,0 +1,2 @@
+"start_time","run_time","model_name","train_RMSE_humus","train_RMSE_mean","train_MAE_humus","train_MAE_mean","val_RMSE_humus","val_RMSE_mean","val_MAE_humus","val_MAE_mean","test_RMSE_humus","test_RMSE_mean","test_MAE_humus","test_MAE_mean","layers","units","dropout","batch_size","ensemble_runs"
+"2022-05-04 16:28:44","4.93 minutes","run_2022-02-04_FNN",6.678,6.678,5.35,5.35,8.235,8.235,6.553,6.553,9.212,9.212,7.949,7.949,1,24,0.1,5,5
