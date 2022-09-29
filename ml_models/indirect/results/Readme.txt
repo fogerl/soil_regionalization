@@ -1,6 +1,6 @@
 only results from sample data provided in data folder
 
-run_2022-02-02_clay:
+run_2022-09-15_clay:
 XGBoost model run for target variable clay based on 100 sample data points
 
 run_2022-02-03_FNN:
