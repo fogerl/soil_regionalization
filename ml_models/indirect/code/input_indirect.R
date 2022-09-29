@@ -76,6 +76,11 @@ names(cov) <- c("ndvi_mean_years","ndvi_years_range","ndvi_mean_summer","ndvi_su
 ## PCA Analysis (only if XGBoost model is used) 
 # Filtering out missing pixels and artefacts with PCA 
 cov_px <- as(cov,"SpatialPixelsDataFrame")
+# change data type of categorical variables
+cov_px$bodenart <- as.factor(cov_px$bodenart)
+cov_px$LISA <- as.factor(cov_px$LISA)
+cov_px$lithology <- as.factor(cov_px$LISA)
+# PCA transformation 
 cov_spc <- landmap::spc(cov_px, ~ndvi_mean_years +ndvi_years_range + ndvi_mean_summer + ndvi_summer_range  +
                        mean_slope +sd_slope + median_slope + q5_slope+ q95_slope+ mean_aspect +sd_aspect+ median_aspect + q5_aspect+ q95_aspect+
                        mean_twi+sd_twi+median_twi+q5_twi+q95_twi+ dem1k+   tm_1+    tm_2+     tm_3+
