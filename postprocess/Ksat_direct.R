@@ -30,7 +30,7 @@ data_at_top$pred <- ifelse(data_at_top$pred > max(values(hydrobod10_1k), na.rm =
 data_at_top$pred <- ifelse(data_at_top$pred < 0, 0, data_at_top$pred)
 
 # define coordinates and transform to spatial data (base raster = dem_1k loaded in input_indirect.R)
-xy <- data_at_top[,c(14,15)]
+xy <- data_at_top[,c(34,35)]
 hydrobod_top_sp <- SpatialPointsDataFrame(coords = xy, data = data_at_top, 
                       proj4string = CRS("+proj=lcc +lat_1=49 +lat_2=46 +lat_0=47.5 +lon_0=13.33333333333333 +x_0=400000 +y_0=400000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"))
 hydrobod_top <- rasterize(hydrobod_top_sp, dem_1k, field = "pred")
