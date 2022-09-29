@@ -62,7 +62,7 @@ output_cor <- output %>% mutate(sand_cor =sand_pred/(silt_pred+sand_pred+clay_pr
                                 oc_pred  =  oc_pred)
 
 # define position of coordinates
-xy <- output_cor[,c(14,15)]
+xy <- output_cor[,c(34,35)]
 # convert to spatial dataframe
 output_sp <- SpatialPointsDataFrame(coords = xy, data = output_cor,
                                     proj4string = CRS("+proj=lcc +lat_1=49 +lat_2=46 +lat_0=47.5 +lon_0=13.33333333333333 +x_0=400000 +y_0=400000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"))
@@ -83,7 +83,7 @@ input_ptf <- output_cor
 # rename columns according to required input names for EU-PTF
 input_ptf <- input_ptf %>% dplyr::rename(DEPTH_M = DEPTH, OC = oc_pred, SAND = sand_cor, SILT = silt_cor, CLAY = clay_cor)
 # only keep relevant columns
-input_ptf <- input_ptf[,-c(1:12,16:21)]
+input_ptf <- input_ptf[,-c(1:32,36:42)]
 
 # transform texture fractions to USDA texture fractions
 input_ptf_transf <- TT.text.transf(
