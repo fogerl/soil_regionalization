@@ -79,7 +79,7 @@ cov_px <- as(cov,"SpatialPixelsDataFrame")
 # change data type of categorical variables
 cov_px$bodenart <- as.factor(cov_px$bodenart)
 cov_px$LISA <- as.factor(cov_px$LISA)
-cov_px$lithology <- as.factor(cov_px$LISA)
+cov_px$lithology <- as.factor(cov_px$lithology)
 # PCA transformation 
 cov_spc <- landmap::spc(cov_px, ~ndvi_mean_years +ndvi_years_range + ndvi_mean_summer + ndvi_summer_range  +
                        mean_slope +sd_slope + median_slope + q5_slope+ q95_slope+ mean_aspect +sd_aspect+ median_aspect + q5_aspect+ q95_aspect+
