@@ -6,7 +6,7 @@
 setwd()
 hydrobod_xgboost <- readRDS("direct/results/run_2021-09-22_xboost_hydrobod_PCA/model.rds")
 input_data_hydrobod <- read.csv("direct/results/run_2021-09-22_xboost_hydrobod_PCA/test_data.csv")
-test_pred_hydrobod <- read.csv("C:/Users/HZeitfogel/Documents/ESSD/soil_regionalisation/direct/results/run_2021-09-22_xboost_hydrobod_PCA/xgboost_test_prediction.csv")
+test_pred_hydrobod <- read.csv("direct/results/run_2021-09-22_xboost_hydrobod_PCA/xgboost_test_prediction.csv")
 
 # predict target variable for whole study area and top horizon 
 # predictor variables from input_indirect.R
@@ -18,8 +18,9 @@ data_at_top <- as.data.frame(grid1k, xy =TRUE)
 # clean and adapt data frame structure
 data_at_top <- drop_na(data_at_top)
 data_at_top$ksat <- as.numeric(NA)
-data_at_top$x <- as.numeric(NA)
-data_at_top$y <- as.numeric(NA)
+data_at_top <- data_at_top %>% 
+  rename("x" = "s1",
+         "y" = "s2",)
 data_at_top$rowid <- as.numeric(NA)
 pred_hydrobod_top <- predict(hydrobod_xgboost,data_at_top, na.action = na.pass)
 data_at_top$pred <- pred_hydrobod_top
